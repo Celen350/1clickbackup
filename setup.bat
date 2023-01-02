@@ -1,7 +1,7 @@
 @echo off
 rem 利用規約表示
 title 1ClickBackup - 利用規約
-type don'topen\termsofservice.txt
+type resource\termsofservice.txt
 echo.
 SET /P selected="利用規約に同意しますか？(Y=YES / N=NO)？"
 
@@ -24,7 +24,7 @@ rem バックアップ元のパスを指定
 echo バックアップ元のフォルダのパスを入力してください。
 echo パスはフォルダアイコンをShiftキーを押しながら右クリックして「パスのコピー」をクリックしてください。(画像を参考にしてください)
 echo そして「"」を消して入力してください。
-don'topen\passcopy.png
+resource\passcopy.png
 set BKSRC=
 set /p BKSRC="パスを入力。>>"
 
@@ -74,8 +74,8 @@ pause
 rem 作業フォルダを削除
 rem -----親ディレクトリに移動-----
 cd ..
-rem -----don'topenを削除-----
-rd /s /q "%~dp0don'topen"
+rem -----resourceを削除-----
+rd /s /q "%~dp0resource"
 rem -----このファイルを削除-----
 del "%~f0"
 
